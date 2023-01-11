@@ -1,0 +1,28 @@
+Title 0.6 Uusi muistiinpano
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over palvelin:
+HTTP POST sisältää JSON-muodossa
+olevan uuden muistiinpanon, 
+johon kuuluu sekä sisältö
+(content) että aikaleima (date).
+Pyyntöön liitetty headeri Content-Type
+kertoo palvelimelle, että pyynnön mukana tuleva
+data on JSON-muotoista.
+end note
+
+note over palvelin:
+Tapahtumakäsittelijä laukeaa tunnistettuaan selaimessa painetun submitin,
+e.preventDefault() -metodi estää sivun uudelleen latautumisen.
+end note
+
+note over palvelin:
+Koodi luo muistiinpanon, 
+lisää sen muistiinpanojen listalle komennolla notes.push(note), 
+piirtää ruudun sisällön eli muistiinpanojen listan uudelleen ja 
+lähettää uuden muistiinpanon palvelimelle.
+end note
+
+palvelin->selain: Uuden muistiinpanon content & date renderöityy ilman uudelleenohjauspyyntöä
+
